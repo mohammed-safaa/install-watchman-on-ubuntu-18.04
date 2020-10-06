@@ -1,0 +1,24 @@
+git clone https://github.com/facebook/watchman.git
+
+cd watchman/
+
+git checkout v4.7.0
+
+sudo apt-get install -y autoconf automake build-essential python-dev
+
+./autogen.sh 
+
+./configure 
+
+make
+
+# error this step 
+./configure --enable-lenient
+
+sudo make install
+
+watchman --version
+
+# 4.7.0
+
+#####  :)  #####
